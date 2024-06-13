@@ -1,7 +1,7 @@
 <?php
-    include 'Conexao.php';
+    include_once 'C:\xampp\htdocs\Trabalho-Almir-Supermercado\DAL\Conexao.php';
     $sql = "select * from produtos;";
-    $con = Conexao::conectar();
+    $con = \DAL\Conexao::conectar();
     $lstPdto = $con->query($sql);
 
     ?>

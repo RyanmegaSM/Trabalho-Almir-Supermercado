@@ -1,4 +1,6 @@
 <?php
+    namespace DAL;
+    use PDO;
     class Conexao{
         private static $dbNome = 'supermercado';
         private static $dbHost = 'localhost';

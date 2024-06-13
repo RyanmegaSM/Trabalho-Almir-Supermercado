@@ -4,7 +4,7 @@
         private ?int $codigo;
         private ?string $nome;
         private ?float $valor;
-        private ?\DateTime $validade;
+        private ?string $validade;
         private ?int $quantidade;
 
         public function  __construct(){ }
@@ -32,7 +32,7 @@
         public function getValidade(){
            return $this->validade;   
        }
-       public function setValidade(\DateTime $validade){
+       public function setValidade(string $validade){
         $this->validade = $validade;   
        }
        public function getQuantidade(){
