@@ -6,7 +6,7 @@
    $sql = "Select * from produtos;"; 
    $con = \DAL\Conexao::conectar();
    $dados = $con->query($sql);
-
+   $con = \DAL\Conexao::desconectar();
 
    foreach ($dados as $linha){
     $pdto = new \MODEL\Produto();
