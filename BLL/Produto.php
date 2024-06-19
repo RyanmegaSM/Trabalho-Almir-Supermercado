@@ -35,6 +35,13 @@ class Produto
         return $dalPdto->Update($produto);
     }
 
+    public function Delete(int $codigo)
+    {
+        $dalPdto = new \DAL\Produto();
+
+        return $dalPdto->Delete($codigo);
+    }
+
 
 }
 

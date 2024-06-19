@@ -50,13 +50,35 @@ $lstPdto = $bllPdto->Select();
                 <td><?php echo $pdto->getValidade(); ?></td>
                 <td><?php echo $pdto->getQuantidade(); ?></td>
                 <td>
-                    <a class="btn-floating btn-small waves-effect waves-light blue"
+                    <a class="btn-floating btn-small waves-effect waves-light blue"><i class="material-icons"
+                            onclick="JavaScript:location.href='formProduto.php'">add</i></a>
+
+                    <a class="btn-floating btn-small waves-effect waves-light green"
                         onclick="JavaScript:location.href='formEditPdto.php?codigo=' + '<?php echo $pdto->getCodigo(); ?>'"><i
                             class="material-icons">edit</i></a>
+
+                    <a class="btn-floating btn-small waves-effect waves-light orange"
+                        onclick="JavaScript:location.href='formDetPdto.php?codigo=' + '<?php echo $pdto->getCodigo(); ?>'"><i
+                            class="material-icons">details</i></a>
+
+
+                    <a class="btn-floating btn-small waves-effect waves-light red"
+                        onclick="JavaScript: remover( <?php echo $pdto->getCodigo(); ?>)"><i
+                            class="material-icons">delete</i></a>
+
                 </td>
+
             </tr>
         <?php } ?>
     </table>
 </body>
 
 </html>
+
+<script>
+    function remover(codigo) {
+        if (confirm('Excluir o Produto ' + codigo + '?')) {
+            location.href = 'remPdto.php?codigo=' + codigo;
+        }
+    }
+</script>

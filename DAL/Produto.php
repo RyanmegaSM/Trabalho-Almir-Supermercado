@@ -66,11 +66,31 @@ class Produto
 
     public function Update(\MODEL\Produto $produto)
     {
+
         $sql = "UPDATE produtos SET nome = ?, valor = ?, quantidade = ?,  validade = ? WHERE codigo=? ";
+
+
 
         $con = Conexao::conectar();
         $query = $con->prepare($sql);
-        $result = $query->execute(array($produto->getCodigo(), $produto->getNome(), $produto->getValor(), $produto->getQuantidade(), $produto->getValidade()));
+        $result = $query->execute(array($produto->getNome(), $produto->getValor(), $produto->getQuantidade(), $produto->getValidade(), $produto->getCodigo()));
+
+        Conexao::desconectar();
+
+
+        return $result;
+
+
+    }
+
+
+    public function Delete(int $codigo)
+    {
+        $sql = "DELETE from produtos  WHERE codigo=? ";
+
+        $con = Conexao::conectar();
+        $query = $con->prepare($sql);
+        $result = $query->execute(array($codigo));
         $con = Conexao::desconectar();
 
 

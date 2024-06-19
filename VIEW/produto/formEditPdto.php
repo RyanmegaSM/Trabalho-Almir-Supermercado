@@ -35,7 +35,7 @@ $produto = $bllPdto->SelectByCod($codigo);
     <div class="container green lighten-4 black -text cols 12">
         <div class="center green ">
 
-            <h1>Alterar Produtos</h1>
+            <h1>Alterar Produto</h1>
 
         </div>
         <div class="row black-text">

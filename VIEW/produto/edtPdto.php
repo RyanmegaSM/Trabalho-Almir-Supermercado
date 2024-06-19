@@ -15,6 +15,8 @@ $produto->setQuantidade($_POST['txtQuant']);
 $produto->setValidade($_POST['txtVali']);
 
 
+
+
 $bllPdto = new \BLL\Produto();
 $result = $bllPdto->Update($produto);
 
