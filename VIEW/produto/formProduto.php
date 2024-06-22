@@ -4,21 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
     <title>Adicionar Produtos</title>
-
-
-
 </head>
 
 <body>
+    <?php include_once '../Menu.php'; ?>
     <div class="container green lighten-4 black -text cols 12">
         <div class="center green ">
 
@@ -27,11 +17,7 @@
         </div>
         <div class="row black-text">
             <form action="insPdto.php" method="POST" class="col s12">
-                <div class="input-field col s6">
-                    <input placeholder="Informe o codigo do Produto" id="codigo" name="txtCod" type="number"
-                        class="validate">
-                    <label for="codigo">Codigo</label>
-                </div>
+
 
                 <div class="input-field col s6">
                     <input placeholder="Informe o nome do Produto" id="nome" name="txtNome" type="text"
@@ -59,14 +45,14 @@
                 <div class="brown lighten-3 center col s12">
                     <br>
                     <button class="waves-effect waves-light btn green" type="save">
-                        Salvar <i class="material-icons"></i>
+                        Salvar <i class="material-icons">save</i>
                     </button>
                     <button class="waves-effect waves-light btn red" type="reset">
-                        Limpar <i class="material-icons"></i>
+                        Limpar <i class="material-icons">clear_all</i>
                     </button>
                     <button class="waves-effect waves-light btn blue" type="button"
                         onclick="javast:location.href='lstProduto.php'">
-                        Voltar <i class="material-icons"></i>
+                        Voltar <i class="material-icons">arrow_back</i>
                     </button>
                     <br>
                     <br>
@@ -75,6 +61,7 @@
         </div>
 
     </div>
+    <?php include_once '../footer.php'; ?>
 </body>
 
 </html>

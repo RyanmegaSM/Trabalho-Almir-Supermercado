@@ -14,7 +14,7 @@ class Produto
         $sql = "Select * from produtos;";
         $con = Conexao::conectar();
         $dados = $con->query($sql);
-        $con = Conexao::desconectar();
+        Conexao::desconectar();
 
         foreach ($dados as $linha) {
             $pdto = new \MODEL\Produto();
@@ -56,7 +56,7 @@ class Produto
 
         $con = Conexao::conectar();
         $result = $con->query($sql);
-        $con = Conexao::desconectar();
+        Conexao::desconectar();
 
 
         return $result;
@@ -91,7 +91,7 @@ class Produto
         $con = Conexao::conectar();
         $query = $con->prepare($sql);
         $result = $query->execute(array($codigo));
-        $con = Conexao::desconectar();
+        Conexao::desconectar();
 
 
         return $result;

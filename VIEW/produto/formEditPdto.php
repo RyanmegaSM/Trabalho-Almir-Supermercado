@@ -17,21 +17,11 @@ $produto = $bllPdto->SelectByCod($codigo);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
     <title>Editar Produtos</title>
-
-
-
 </head>
 
 <body>
+    <?php include_once '../Menu.php'; ?>
     <div class="container green lighten-4 black -text cols 12">
         <div class="center green ">
 
@@ -71,7 +61,7 @@ $produto = $bllPdto->SelectByCod($codigo);
                     <div class="brown lighten-3 center col s12">
                         <br>
                         <button class="waves-effect waves-light btn green" type="submit">
-                            Salvar <i class="material-icons">save</i>
+                            Salvar <i class="material-icons"></i>
                         </button>
                         <button class="waves-effect waves-light btn red" type="reset">
                             Limpar <i class="material-icons"></i>
@@ -87,6 +77,7 @@ $produto = $bllPdto->SelectByCod($codigo);
         </div>
 
     </div>
+    <?php include_once '../footer.php'; ?>
 </body>
 
 </html>

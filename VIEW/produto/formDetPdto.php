@@ -12,26 +12,16 @@ $produto = $bllPdto->SelectByCod($codigo);
 
 
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
     <title>Detalhes de Produtos</title>
-
-
-
 </head>
 
 <body>
+    <?php include_once '../Menu.php'; ?>
     <div class="container green lighten-4 black -text cols 12">
         <div class="center green ">
 
@@ -63,24 +53,23 @@ $produto = $bllPdto->SelectByCod($codigo);
                 <br>
                 <button class="waves-effect waves-light btn green" type="button"
                     onclick="JavaScript:location.href='formEditPdto.php?codigo=' + '<?php echo $produto->getCodigo(); ?>'">
-                    Editar <i class="material-icons"></i>
+                    Editar <i class="material-icons">edit</i>
                 </button>
-
-
-                <button class="waves-effect waves-light btn blue" type="button"
-                    onclick="JavaScript:location.href='formProduto.php'">
-                    Adicionar <i class="material-icons"></i>
-                </button>
-
 
                 <button class="waves-effect waves-light btn red" type="button"
                     onclick="JavaScript: remover( <?php echo $produto->getCodigo(); ?>)">
-                    Deletar <i class="material-icons"></i>
+                    Deletar <i class="material-icons">delete</i>
                 </button>
+
+                <button class="waves-effect waves-light btn blue" type="button"
+                    onclick="JavaScript:location.href='formProduto.php'">
+                    Novo <i class="material-icons">add</i>
+                </button>
+
 
                 <button class="waves-effect waves-light btn orange" type="button"
                     onclick="javaScript:location.href='lstProduto.php'">
-                    Voltar <i class="material-icons"></i>
+                    Voltar <i class="material-icons">arrow_back</i>
                 </button>
 
 
@@ -92,6 +81,8 @@ $produto = $bllPdto->SelectByCod($codigo);
         </div>
 
     </div>
+
+    <?php include_once '../footer.php'; ?>
 </body>
 
 </html>
