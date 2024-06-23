@@ -20,6 +20,12 @@ class Produto
         return $dalPdto->SelectByCod($codigo);
     }
 
+    public function SelectNome(string $nome)
+    {
+        $dalPdto = new \DAL\Produto();
+        return $dalPdto->SelectNome($nome);
+    }
+
 
     public function Insert(\MODEL\Produto $produto)
     {

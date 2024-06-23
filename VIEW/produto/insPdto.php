@@ -6,9 +6,10 @@ include_once 'C:\xampp\htdocs\Trabalho-Almir-Supermercado\BLL\Produto.php';
 
 $produto = new \MODEL\Produto();
 
-$produto->setCodigo($_POST['txtCod']);
+
 $produto->setNome($_POST['txtNome']);
-$produto->setValor($_POST['txtValor']);
+$fltValor = floatval($_POST['txtValor']);
+$produto->setValor($fltValor);
 $produto->setQuantidade($_POST['txtQuant']);
 $produto->setValidade($_POST['txtVali']);
 

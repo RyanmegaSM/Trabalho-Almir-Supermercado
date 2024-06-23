@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="input-field col s6">
-                    <input placeholder="Informe o valor do Produto" id="valor" name="txtValor" type="number"
+                    <input placeholder="Informe o valor do Produto" id="valor" name="txtValor" type="text"
                         class="validate">
                     <label for="valor">Valor</label>
                 </div>
