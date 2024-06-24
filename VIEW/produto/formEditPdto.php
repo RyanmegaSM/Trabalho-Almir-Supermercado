@@ -35,7 +35,7 @@ $produto = $bllPdto->SelectByCod($codigo);
             <div class="row black-text">
 
                 <form action="edtPdto.php" method="POST" class="col s12" id="paddForm">
-                    <div class="input-field col s12">
+                    <div class="paddInput input-field col s12">
                         <label for="codigo" class="black-text bold">Codigo: <?php echo $produto->getCodigo() ?></label>
                         </br> </br>
                         <input type="hidden" name="txtCod" value=<?php echo $codigo; ?>>
@@ -64,18 +64,22 @@ $produto = $bllPdto->SelectByCod($codigo);
                                 class="validate" value="<?php echo $produto->getValidade(); ?>">
                             <label for="validade">Validade</label>
                         </div>
+
                         <div class="brown lighten-3 center col s12">
                             <br>
                             <button class="waves-effect waves-light btn green" type="submit">
                                 Salvar <i class="material-icons">save</i>
                             </button>
+
                             <button class="waves-effect waves-light btn red" type="reset">
                                 Limpar <i class="material-icons">clear_all</i>
                             </button>
+
                             <button class="waves-effect waves-light btn blue" type="button"
                                 onclick="javaScript:location.href='lstProduto.php'">
                                 Voltar <i class="material-icons">arrow_back</i>
                             </button>
+
                             <br>
                             <br>
                         </div>

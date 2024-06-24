@@ -28,7 +28,9 @@ $produto = $bllPdto->SelectByCod($codigo);
             <h1>Detalhes do Produto</h1>
 
         </div>
+
         <div class="row black-text">
+
             <div class="input-field col s6">
                 <h5>Codigo: <?php echo $produto->getCodigo() ?></h5>
                 <input type="hidden" name="txtCod" value=<?php echo $codigo; ?>>
