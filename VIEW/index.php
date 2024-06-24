@@ -20,22 +20,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 
-<body>
-    <style>
-        body {
-            width: 100vw;
-            height: 100vh;
-            background-image: url(../VIEW/image/background.jpg);
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
-    </style>
+<body class="background">
 
     </div>
 
-    <div class="had-container">
+    <div class="mains had-container">
 
         <div class="parallax-container logueo">
             <div class="parallax"><img src="https://alistapart.com/d/438/fig-6--background-blend-mode.jpg"></div>
@@ -71,7 +63,17 @@
             </div>
         </div>
     </div>
-    </div> <!-- fin del .container -->
+    </div>
+
+    <footer class="page-footer green dark-1">
+        <div class="footer-copyright green">
+            <div class="container">
+                ©Copyright SuperMercado - 2024
+                <a class="grey-text text-lighten-4 right" href="https://www.fema.edu.br">fema.edu.br</a>
+            </div>
+        </div>
+    </footer>
+
 
 
     <!-- jQuery first, then Bootstrap JS. -->
@@ -79,14 +81,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="mySpxript.js"></script>
 </body>
-<footer class="page-footer green dark-1">
-    <div class="footer-copyright green">
-        <div class="container">
-            ©Copyright SuperMercado - 2024
-            <a class="grey-text text-lighten-4 right" href="https://www.fema.edu.br">fema.edu.br</a>
-        </div>
-    </div>
-</footer>
+
 
 </html>
 

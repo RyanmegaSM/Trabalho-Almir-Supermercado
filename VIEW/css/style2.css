@@ -1,0 +1,26 @@
+.mains {
+  height: 95%;
+}
+.mainVH {
+  height: 81vh;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.form {
+  margin: 0 auto;
+}
+
+.paddInput {
+  padding: 0 0.75rem;
+}
+
+#paddForm {
+  padding: 0;
+}

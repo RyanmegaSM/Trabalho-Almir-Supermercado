@@ -91,14 +91,14 @@ else
             <div class="center-align" style="display:inline-block;margin: 1rem 0;">
                 <button class="btn-large waves-effect waves-light black center-align " type="" name="action"
                     onclick="JavaScript:history.back()">
-                    <i class="material-icons center">arrow_back</i>
+                    <i class="material-icons">arrow_back</i>
                 </button>
             </div>
 
             <div class="center-align " style="margin: 1rem 0;display:inline-block;">
                 <button class="btn waves-effect waves-light btn-large light blue center-align " type="submit"
                     name="action" onclick="JavaScript:location.href='formProduto.php'">
-                    <i class="material-icons center">add</i>
+                    <i class="material-icons">add</i>
                 </button>
             </div>
             </divclass>
