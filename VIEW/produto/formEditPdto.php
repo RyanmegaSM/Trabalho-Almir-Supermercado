@@ -39,50 +39,52 @@ $produto = $bllPdto->SelectByCod($codigo);
                         <label for="codigo" class="black-text bold">Codigo: <?php echo $produto->getCodigo() ?></label>
                         </br> </br>
                         <input type="hidden" name="txtCod" value=<?php echo $codigo; ?>>
+                    </div>
 
 
-                        <div class="paddInput input-field col s12">
-                            <input placeholder="Informe o nome do Produto" id="nome" name="txtNome" type="text"
-                                class="validate" value="<?php echo $produto->getNome(); ?>">
-                            <label for="nome">Nome</label>
-                        </div>
+                    <div class="paddInput input-field col s12">
+                        <input placeholder="Informe o nome do Produto" id="nome" name="txtNome" type="text"
+                            class="validate paddingInput" value="<?php echo $produto->getNome(); ?>">
+                        <label for="nome">Nome</label>
+                    </div>
 
-                        <div class="paddInput input-field col s12">
-                            <input placeholder="Informe o valor do Produto" id="valor" name="txtValor" type="text"
-                                class="validate" value="<?php echo $produto->getValor(); ?>">
-                            <label for="valor">Valor</label>
-                        </div>
+                    <div class="paddInput input-field col s12">
+                        <input placeholder="Informe o valor do Produto" id="valor" name="txtValor" type="text"
+                            class="validate paddingInput" value="<?php echo $produto->getValor(); ?>">
+                        <label for="valor">Valor</label>
+                    </div>
 
-                        <div class="paddInput input-field col s12">
-                            <input placeholder="Informe a quantidade de Produtos" id="quantidade" name="txtQuant"
-                                type="number" class="validate" value="<?php echo $produto->getQuantidade(); ?>">
-                            <label for="quantidade">Quantidade</label>
-                        </div>
+                    <div class="paddInput input-field col s12">
+                        <input placeholder="Informe a quantidade de Produtos" id="quantidade" name="txtQuant"
+                            type="number" class="validate paddingInput"
+                            value="<?php echo $produto->getQuantidade(); ?>">
+                        <label for="quantidade">Quantidade</label>
+                    </div>
 
-                        <div class="paddInput input-field col s12">
-                            <input placeholder="Informe a validade do Produto" id="validade" name="txtVali" type="date"
-                                class="validate" value="<?php echo $produto->getValidade(); ?>">
-                            <label for="validade">Validade</label>
-                        </div>
+                    <div class="paddInput input-field col s12">
+                        <input placeholder="Informe a validade do Produto" id="validade" name="txtVali" type="date"
+                            class="validate paddingInput" value="<?php echo $produto->getValidade(); ?>">
+                        <label for="validade">Validade</label>
+                    </div>
 
-                        <div class="brown lighten-3 center col s12">
-                            <br>
-                            <button class="waves-effect waves-light btn green" type="submit">
-                                Salvar <i class="material-icons">save</i>
-                            </button>
+                    <div class="brown lighten-3 center col s12">
+                        <br>
+                        <button class="waves-effect waves-light btn green" type="submit">
+                            Salvar <i class="material-icons">save</i>
+                        </button>
 
-                            <button class="waves-effect waves-light btn red" type="reset">
-                                Limpar <i class="material-icons">clear_all</i>
-                            </button>
+                        <button class="waves-effect waves-light btn red" type="reset">
+                            Limpar <i class="material-icons">clear_all</i>
+                        </button>
 
-                            <button class="waves-effect waves-light btn blue" type="button"
-                                onclick="javaScript:location.href='lstProduto.php'">
-                                Voltar <i class="material-icons">arrow_back</i>
-                            </button>
+                        <button class="waves-effect waves-light btn blue" type="button"
+                            onclick="javaScript:location.href='lstProduto.php'">
+                            Voltar <i class="material-icons">arrow_back</i>
+                        </button>
 
-                            <br>
-                            <br>
-                        </div>
+                        <br>
+                        <br>
+                    </div>
                 </form>
             </div>
         </div>

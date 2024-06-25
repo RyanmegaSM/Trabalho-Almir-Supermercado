@@ -24,3 +24,7 @@
 #paddForm {
   padding: 0;
 }
+
+.paddingInput {
+  margin: 0 !important;
+}

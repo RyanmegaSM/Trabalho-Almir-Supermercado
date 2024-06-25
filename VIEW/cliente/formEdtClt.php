@@ -32,6 +32,7 @@ $cliente = $bllClt->SelectByID($id);
             </div>
             <div class="row black-text">
                 <form action="edtClt.php" method="POST" class="col s12" id="paddForm">
+
                     <div class="paddInput input-field col s12">
                         <label for="id" class="black-text bold">ID: <?php echo $cliente->getID() ?></label>
                         </br> </br>
@@ -53,6 +54,7 @@ $cliente = $bllClt->SelectByID($id);
                             class="validate" value="<?php echo $cliente->gettelefone(); ?>">
                         <label id="telefone" for="telefone">Telefone</label>
                     </div>
+
                     <div class="brown lighten-3 center col s12">
                         <br>
                         <button class="waves-effect waves-light btn green" type="submit">
