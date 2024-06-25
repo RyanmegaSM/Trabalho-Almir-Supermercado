@@ -33,7 +33,7 @@ if (!isset($_SESSION['login']))
                 <li><a href="/Trabalho-Almir-Supermercado/VIEW/produto/lstProduto.php">Produtos</a></li>
                 <li><a href="badges.html">Funcionarios</a></li>
                 <li><a href="/Trabalho-Almir-Supermercado/VIEW/cliente/lstCliente.php">Clientes</a></li>
-                <li><a href="collapsible.html">Cargos</a></li>
+                <li><a href="/Trabalho-Almir-Supermercado/VIEW/cargo/lstCargo.php">Cargos</a></li>
                 <li><a href="/Trabalho-Almir-Supermercado/VIEW/Logout.php">Sair</a></li>
             </ul>
         </div>

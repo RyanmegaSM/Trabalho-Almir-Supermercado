@@ -21,14 +21,14 @@ else
 
 <!DOCTYPE html>
 <html lang="pt-br">
+<link rel="stylesheet" href="../css/style2.css">
+<title>Listar Produtos</title>
 
-
-
-<body>
+<body class="Back_Color">
     <?php include_once '../Menu.php'; ?>
 
 
-    <section class="container">
+    <section class="section_Color container">
         <h1 style="text-align: center;">Lista de Produtos </h1>
 
         <div class="row">
@@ -53,11 +53,6 @@ else
                 <th>Validade</th>
                 <th>Quantidade</th>
                 <th>Funções</th>
-
-
-
-
-
             </tr>
 
             <?php foreach ($lstPdto as $pdto) { ?>

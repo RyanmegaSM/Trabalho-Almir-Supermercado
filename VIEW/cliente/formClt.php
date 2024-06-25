@@ -47,6 +47,7 @@
             <div class="center green">
                 <h1>Adicionar Cliente</h1>
             </div>
+
             <div class="row black-text">
                 <form action="insClt.php" method="POST" class="col s12" id="paddForm"
                     onsubmit="return validarFormulario()">

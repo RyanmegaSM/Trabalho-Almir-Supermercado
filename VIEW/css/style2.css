@@ -28,3 +28,16 @@
 .paddingInput {
   margin: 0 !important;
 }
+
+.section_Color {
+  background: #f0eded;
+  border-radius: 10px 10px 0 0;
+}
+
+.Back_Color {
+  background: #cccccc;
+}
+
+.mainVH_DetCargo {
+  height: 87vh;
+}
