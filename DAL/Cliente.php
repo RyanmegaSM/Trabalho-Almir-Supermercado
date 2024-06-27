@@ -60,7 +60,7 @@ class Cliente
     public function Update(\MODEL\Cliente $cliente)
     {
         $sql = "UPDATE cliente SET nome = ?, cpf = ?, telefone = ? WHERE id = ?;";
-
+        var_dump($cliente);
         $con = Conexao::conectar();
         $query = $con->prepare($sql);
         $result = $query->execute(array($cliente->getNome(), $cliente->getCPF(), $cliente->gettelefone(), $cliente->getID()));

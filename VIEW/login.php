@@ -22,7 +22,7 @@ try {
 if (md5($senha) == $linha['senha']) {
     session_start();
     $_SESSION['login'] = $usuario;
-    header("location:Menu.php");
+    header("location:/Trabalho-Almir-Supermercado/VIEW/produto/lstProduto.php");
 } else
     header("location:index.php");
 ?>

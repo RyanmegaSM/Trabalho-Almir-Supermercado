@@ -1,6 +1,10 @@
 .mains {
   height: 95%;
 }
+
+.mains2 {
+  height: 90%;
+}
 .mainVH {
   height: 81vh;
 }
@@ -40,4 +44,8 @@
 
 .mainVH_DetCargo {
   height: 87vh;
+}
+
+.mainVH_EdtFunc {
+  height: 90vh;
 }

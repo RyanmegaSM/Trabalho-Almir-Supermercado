@@ -1,18 +1,18 @@
 <?php
-include_once 'C:\xampp\htdocs\Trabalho-Almir-Supermercado\BLL\Cliente.php';
-use BLL\Cliente;
+include_once 'C:\xampp\htdocs\Trabalho-Almir-Supermercado\BLL\Funcionario.php';
+use BLL\Funcionario;
 
 if (isset($_GET['busca']))
     $busca = $_GET['busca'];
 else
     $busca = null;
 
-$bllClt = new \BLL\Cliente();
+$bllFunc = new \BLL\Funcionario();
 
 if ($busca == null)
-    $lstClt = $bllClt->Select();
+    $lstFunc = $bllFunc->Select();
 else
-    $lstClt = $bllClt->SelectNome($busca);
+    $lstFunc = $bllFunc->SelectNome($busca);
 
 ?>
 
@@ -24,7 +24,7 @@ else
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style2.css">
-    <title>Lista de Clientes</title>
+    <title>Lista de Funcionarios</title>
 </head>
 
 <body class="Back_Color">
@@ -33,13 +33,13 @@ else
 
     <section class="section_Color container">
 
-        <h1 style="text-align:center;">Lista de Clientes</h1>
+        <h1 style="text-align:center;">Lista de Funcionarios</h1>
 
         <div class="row">
             <div class="input-field">
-                <form action="../Cliente/lstCliente.php" method="GET" id="frmBuscaCliente" class="col s8">
+                <form action="../Funcionario/lstFuncionario.php" method="GET" id="frmBuscaFunc" class="col s8">
                     <div class="input-field col s8">
-                        <input type="text" placeholder="informe o nome do Cliente" class="form-control col s10"
+                        <input type="text" placeholder="informe o nome do Funcionario" class="form-control col s10"
                             id="txtBusca" name="busca">
                         <button class="btn waves-effect waves-light green col m1" type="submit" name="action">
                             <i class="material-icons right">search</i></button>
@@ -53,27 +53,29 @@ else
                 <th>ID</th>
                 <th>Nome</th>
                 <th>CPF</th>
+                <th>Cargo</th>
                 <th>Telefone</th>
                 <th>Operações</th>
             </tr>
 
-            <?php foreach ($lstClt as $clt) { ?>
+            <?php foreach ($lstFunc as $func) { ?>
                 <tr>
-                    <td> <?php echo $clt->getID(); ?> </td>
-                    <td> <?php echo $clt->getNome(); ?> </td>
-                    <td> <?php echo $clt->getCPF(); ?> </td>
-                    <td> <?php echo $clt->gettelefone(); ?> </td>
+                    <td> <?php echo $func->getID(); ?> </td>
+                    <td> <?php echo $func->getNome(); ?> </td>
+                    <td> <?php echo $func->getCPF(); ?> </td>
+                    <td> <?php echo $func->getCargo_Id(); ?> </td>
+                    <td> <?php echo $func->gettelefone(); ?> </td>
                     <td>
                         <a class="btn-floating btn-small waves-effect waves-light green"
-                            onclick="JavaScript:location.href='formEdtClt.php?id=' + '<?php echo $clt->getID(); ?>'">
+                            onclick="JavaScript:location.href='formEdtFunc.php?id=' + '<?php echo $func->getID(); ?>'">
                             <i class="material-icons">edit</i></a>
 
                         <a class="btn-floating btn-small waves-effect waves-light orange"
-                            onclick="JavaScript:location.href='formDetClt.php?id=' + '<?php echo $clt->getID(); ?>'">
+                            onclick="JavaScript:location.href='formDetFunc.php?id=' + '<?php echo $func->getID(); ?>'">
                             <i class="material-icons">details</i></a>
 
                         <a class="btn-floating btn-small waves-effect waves-light red"
-                            onclick="JavaScript: remover( <?php echo $clt->getId(); ?> )">
+                            onclick="JavaScript: remover( <?php echo $func->getId(); ?> )">
                             <i class="material-icons">delete</i></a>
                     </td>
                 </tr>
@@ -89,7 +91,7 @@ else
 
             <div class="center-align " style="margin: 1rem 0;display:inline-block;">
                 <button class="btn waves-effect waves-light btn-large light blue center-align " type="submit"
-                    name="action" onclick="JavaScript:location.href='formClt.php'">
+                    name="action" onclick="JavaScript:location.href='formFunc.php'">
                     <i class="material-icons center">add</i>
                 </button>
             </div>
@@ -103,8 +105,8 @@ else
 </html>
 <script>
     function remover(id) {
-        if (confirm('Excluir o Cliente ' + id + '?')) {
-            location.href = 'remClt.php?id=' + id;
+        if (confirm('Excluir o funcionario ' + id + '?')) {
+            location.href = 'remFunc.php?id=' + id;
         }
     }
 </script>

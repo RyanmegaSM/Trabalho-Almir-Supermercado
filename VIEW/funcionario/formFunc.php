@@ -7,7 +7,9 @@
     function validarFormulario() {
         var nome = document.getElementById('nome').value.trim();
         var cpf = document.getElementById('cpf').value.trim();
+        var cargo_id = document.getElementById('cargo_id').value.trim();
         var telefone = document.getElementById('telefone').value.trim();
+
 
         // Validar o nome
         if (nome.length < 2 || nome.length > 40 || !/^[a-zA-ZÀ-ÿ ]+$/.test(nome)) {
@@ -18,6 +20,10 @@
         // Validar o CPF
         if (cpf.length !== 11 || isNaN(cpf)) {
             alert('CPF inválido. Deve conter exatamente 11 dígitos numéricos.');
+            return false;
+        }
+        if (isNaN(cargo_id) || cargo_id <= 0) {
+            alert('Cargo ID inválido. Deve ser um número positivo.');
             return false;
         }
 
@@ -36,7 +42,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style2.css">
-    <title>Adicionar Clientes</title>
+    <title>Adicionar Funcionarios</title>
 </head>
 
 <body class="mainVH">
@@ -45,15 +51,15 @@
 
         <div class="container green lighten-4 black -text cols 12">
             <div class="center green">
-                <h1>Adicionar Cliente</h1>
+                <h1>Adicionar Funcionario</h1>
             </div>
 
             <div class="row black-text">
-                <form action="insClt.php" method="POST" class="col s12" id="paddForm"
+                <form action="insFunc.php" method="POST" class="col s12" id="paddForm"
                     onsubmit="return validarFormulario()">
 
                     <div class="input-field col s12">
-                        <input placeholder="informe o Nome" id="nome" name="txtNome" type="text" class="validate"
+                        <input placeholder="informe o Nome" id="nome" name="txtnome" type="text" class="validate"
                             required minlength="2" maxlength="40" pattern="[a-zA-ZÀ-ÿ ]+">
                         <label for="nome">Nome</label>
                     </div>
@@ -63,6 +69,13 @@
                             required minlength="11" maxlength="11" pattern="[0-9]+">
                         <label for="cpf">CPF</label>
                     </div>
+
+                    <div class="input-field col s12">
+                        <input placeholder="informe o Cargo" id="cargo_id" name="txtCargo" type="number"
+                            class="validate" required>
+                        <label for="cargo_id">Cargo</label>
+                    </div>
+
 
                     <div class="input-field col s12">
                         <input placeholder="informe o Telefone" id="telefone" name="txttel" type="number"
@@ -81,7 +94,7 @@
                         </button>
 
                         <button class="waves-effect waves-light btn blue" type="button"
-                            onclick="JavaScript:location.href='lstCliente.php'">
+                            onclick="JavaScript:location.href='lstFuncionario.php'">
                             Voltar <i class="material-icons">arrow_back</i>
                         </button>
                         <br>

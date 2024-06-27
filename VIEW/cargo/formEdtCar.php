@@ -32,7 +32,7 @@ $cargo = $bllCar->SelectByID($id);
                 <h1>Editar Cargo</h1>
             </div>
             <div class="row black-text">
-                <form action="edtCar.php" method="POST" class="col s12">
+                <form action="edtCar.php" method="POST" class="col s12" id="paddForm">
 
                     <div class="paddInput input-field col s8">
                         <label for="id" class="black-text bold">ID: <?php echo $cargo->getID() ?></label>
@@ -58,11 +58,13 @@ $cargo = $bllCar->SelectByID($id);
                         <label id="salario" for="salario">Salario</label>
                     </div>
 
+
                     <div class="paddInput input-field col s12">
-                        <input placeholder="informe a Quantidade de funcionarios" id="qtdfunc" name="txtQtdfunc"
-                            type="number" class="validate" value="<?php echo $cargo->getQtdfunc(); ?>">
-                        <label id="qtdfunc" for="qtdfunc">Quantidade de funcionarios</label>
+                        <input placeholder="Funcionarios" id="qtdfunc" name="txtQtdfunc" type="number" class="validate"
+                            value="<?php echo $cargo->getQtdfunc(); ?>">
+                        <label id="qtdfunc" for="qtdfunc">Funcionarios</label>
                     </div>
+
 
                     <div class="brown lighten-3 center col s12">
                         <br>
